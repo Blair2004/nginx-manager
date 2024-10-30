@@ -35,7 +35,7 @@ enable_site() {
     fi
 
     # Reload NGINX to apply changes
-    sudo systemctl reload nginx
+    sudo service nginx reload
 }
 
 # Function to disable a site
@@ -49,7 +49,7 @@ disable_site() {
     fi
 
     # Reload NGINX to apply changes
-    sudo systemctl reload nginx
+    sudo service nginx reload
 }
 
 # Function to change server_name and/or port
@@ -82,7 +82,7 @@ change_site() {
     esac
 
     # Reload NGINX to apply changes
-    sudo systemctl reload nginx
+    sudo service nginx reload
 }
 
 # Help function
